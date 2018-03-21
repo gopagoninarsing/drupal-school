@@ -1,0 +1,23 @@
+uuid: 53b10653-dffa-454f-adda-a45fd7ebcf8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pass_marks
+    - node.type.examination
+id: node.examination.field_pass_marks
+field_name: field_pass_marks
+entity_type: node
+bundle: examination
+label: 'Pass Marks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,35 @@
+uuid: 36548c87-5e01-4bb5-84bf-66903b3400c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.class.body
+    - field.field.node.class.field_class_teacher
+    - node.type.class
+  module:
+    - text
+    - user
+id: node.class.default
+targetEntityType: node
+bundle: class
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_class_teacher:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

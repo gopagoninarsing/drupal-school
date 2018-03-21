@@ -1,0 +1,23 @@
+uuid: 4a74656b-531d-4a1d-9f4f-b561c7911272
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exam_marks
+    - node.type.examination
+id: node.examination.field_exam_marks
+field_name: field_exam_marks
+entity_type: node
+bundle: examination
+label: 'Exam Marks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

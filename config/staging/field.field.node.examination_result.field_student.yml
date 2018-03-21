@@ -1,0 +1,33 @@
+uuid: cfc42ec0-5d56-4742-8d9c-d4466b3a5ffe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student
+    - node.type.examination_result
+id: node.examination_result.field_student
+field_name: field_student
+entity_type: node
+bundle: examination_result
+label: Student
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        student: student
+        administrator: '0'
+        teacher: '0'
+        non_teaching_staff: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

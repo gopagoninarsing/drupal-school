@@ -1,0 +1,14 @@
+uuid: 27d27d79-e2b3-4d03-8d14-f28a16eec5c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.non_teaching_staff
+  module:
+    - user
+id: user_add_role_action.non_teaching_staff
+label: 'Add the Non Teaching Staff role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: non_teaching_staff

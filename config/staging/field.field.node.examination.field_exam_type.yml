@@ -1,0 +1,28 @@
+uuid: 5918768a-afde-4f0f-bba9-9bd2260d034e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exam_type
+    - node.type.exam_type
+    - node.type.examination
+id: node.examination.field_exam_type
+field_name: field_exam_type
+entity_type: node
+bundle: examination
+label: 'Exam Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      exam_type: exam_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

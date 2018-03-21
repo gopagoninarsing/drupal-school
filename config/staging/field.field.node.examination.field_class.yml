@@ -1,0 +1,28 @@
+uuid: 049005d8-6d06-4409-9a70-7b9550a8c239
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class
+    - node.type.class
+    - node.type.examination
+id: node.examination.field_class
+field_name: field_class
+entity_type: node
+bundle: examination
+label: Class
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      class: class
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: 58bbad84-8ef2-4c83-a813-06d4c51a0a91
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.non_teaching_staff
+  module:
+    - user
+id: user_remove_role_action.non_teaching_staff
+label: 'Remove the Non Teaching Staff role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: non_teaching_staff

@@ -1,0 +1,35 @@
+uuid: 5148c180-1496-4b21-a655-458c5c2e90a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.section.body
+    - field.field.node.section.field_class
+    - node.type.section
+  module:
+    - text
+    - user
+id: node.section.default
+targetEntityType: node
+bundle: section
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_class:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

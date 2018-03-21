@@ -1,0 +1,26 @@
+uuid: dbc16395-e7ea-4718-b1dd-b4051dcc1d27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.exam_type.body
+    - node.type.exam_type
+  module:
+    - text
+    - user
+id: node.exam_type.default
+targetEntityType: node
+bundle: exam_type
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

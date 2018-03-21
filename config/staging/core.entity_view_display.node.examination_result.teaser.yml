@@ -1,0 +1,28 @@
+uuid: bdbe3a66-1ac4-4eed-b69b-0c8860f19126
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.examination_result.body
+    - node.type.examination_result
+  module:
+    - text
+    - user
+id: node.examination_result.teaser
+targetEntityType: node
+bundle: examination_result
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

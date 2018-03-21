@@ -1,0 +1,28 @@
+uuid: f0afdceb-e994-4c4c-a03e-adf198c3a7b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_examination
+    - node.type.examination
+    - node.type.examination_result
+id: node.examination_result.field_examination
+field_name: field_examination
+entity_type: node
+bundle: examination_result
+label: Examination
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      examination: examination
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

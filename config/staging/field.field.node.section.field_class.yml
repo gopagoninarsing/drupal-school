@@ -1,0 +1,28 @@
+uuid: 733ab78a-a7e5-48ca-80e5-da7b282b300f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class
+    - node.type.class
+    - node.type.section
+id: node.section.field_class
+field_name: field_class
+entity_type: node
+bundle: section
+label: Class
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      class: class
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 4215a53e-8992-420a-838b-729d962f90cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exam_date
+    - node.type.examination
+  module:
+    - datetime
+id: node.examination.field_exam_date
+field_name: field_exam_date
+entity_type: node
+bundle: examination
+label: 'Date of Examination'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

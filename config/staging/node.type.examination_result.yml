@@ -1,0 +1,18 @@
+uuid: 20e3d1a6-f0b1-4ce9-80aa-18889cf43fe9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Examination Result'
+type: examination_result
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

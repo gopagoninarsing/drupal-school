@@ -1,0 +1,22 @@
+uuid: c85a79ad-b124-48f0-b5ae-020d27c85125
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.examination_result
+  module:
+    - text
+id: node.examination_result.body
+field_name: body
+entity_type: node
+bundle: examination_result
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

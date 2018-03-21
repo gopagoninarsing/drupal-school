@@ -1,0 +1,23 @@
+uuid: 7c62d126-ae75-4083-a11d-e628cef86006
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_marks_scored
+    - node.type.examination_result
+id: node.examination_result.field_marks_scored
+field_name: field_marks_scored
+entity_type: node
+bundle: examination_result
+label: 'Marks Scored'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

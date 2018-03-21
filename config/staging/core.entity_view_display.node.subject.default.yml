@@ -1,0 +1,26 @@
+uuid: 0d16a908-e853-466f-a4a5-091433837cab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.subject.body
+    - node.type.subject
+  module:
+    - text
+    - user
+id: node.subject.default
+targetEntityType: node
+bundle: subject
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

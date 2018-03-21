@@ -1,0 +1,9 @@
+uuid: 12ae8295-7445-4a44-a6fc-89eff64ddbd4
+langcode: en
+status: true
+dependencies: {  }
+id: non_teaching_staff
+label: 'Non Teaching Staff'
+weight: 5
+is_admin: null
+permissions: {  }

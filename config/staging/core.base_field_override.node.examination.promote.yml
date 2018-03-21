@@ -1,0 +1,22 @@
+uuid: 8c15600a-e646-47cc-ac06-24ac4070b2c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.examination
+id: node.examination.promote
+field_name: promote
+entity_type: node
+bundle: examination
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

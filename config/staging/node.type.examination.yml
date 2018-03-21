@@ -1,0 +1,18 @@
+uuid: 8be65ade-e3d3-4dc4-93d4-bd43aa65ec80
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Examination
+type: examination
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

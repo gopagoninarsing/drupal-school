@@ -1,0 +1,33 @@
+uuid: 5cded9ff-49f9-483f-bd8b-ec478b5653c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class_teacher
+    - node.type.class
+id: node.class.field_class_teacher
+field_name: field_class_teacher
+entity_type: node
+bundle: class
+label: 'Class Teacher'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        teacher: teacher
+        administrator: '0'
+        student: '0'
+        non_teaching_staff: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

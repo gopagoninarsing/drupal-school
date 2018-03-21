@@ -1,0 +1,22 @@
+uuid: 04830fc5-5cb3-43be-bfbd-c35d3646c931
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.exam_type
+  module:
+    - text
+id: node.exam_type.body
+field_name: body
+entity_type: node
+bundle: exam_type
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
