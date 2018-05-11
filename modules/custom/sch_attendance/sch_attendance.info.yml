@@ -1,0 +1,5 @@
+name: 'Sch Attendance'
+type: module
+description: 'Attendance for the schools'
+core: 8.x
+package: 'Custom'

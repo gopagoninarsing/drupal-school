@@ -1,0 +1,22 @@
+{#
+/**
+ * @file sample_data.html.twig
+ * Default theme implementation to present Sample_data data.
+ *
+ * This template is used when viewing Sample_data pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_sample_data()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('sample_data') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

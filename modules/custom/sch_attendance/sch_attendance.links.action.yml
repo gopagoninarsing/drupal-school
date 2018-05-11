@@ -1,0 +1,11 @@
+entity.sample_data.add_form:
+  route_name: entity.sample_data.add_form
+  title: 'Add Sample_data'
+  appears_on:
+    - entity.sample_data.collection
+
+entity.sch_attendance.add_form:
+  route_name: entity.sch_attendance.add_form
+  title: 'Add Attendance'
+  appears_on:
+    - entity.sch_attendance.collection

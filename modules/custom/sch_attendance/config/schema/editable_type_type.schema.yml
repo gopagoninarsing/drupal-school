@@ -1,0 +1,12 @@
+sch_attendance.editable_type_type.*:
+  type: config_entity
+  label: 'Editable_type type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

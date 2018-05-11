@@ -1,0 +1,34 @@
+add sample_data entities:
+  title: 'Create new Sample_data entities'
+
+administer sample_data entities:
+  title: 'Administer Sample_data entities'
+  description: 'Allow to access the administration form to configure Sample_data entities.'
+  restrict access: true
+
+delete sample_data entities:
+  title: 'Delete Sample_data entities'
+
+edit sample_data entities:
+  title: 'Edit Sample_data entities'
+
+view published sample_data entities:
+  title: 'View published Sample_data entities'
+
+view unpublished sample_data entities:
+  title: 'View unpublished Sample_data entities'
+
+
+add sch_attendance entities:
+  title: 'Create new sch Attendance entities'
+
+administer sch_attendance entities:
+  title: 'Administer sch Attendance entities'
+  description: 'Allow to access the administration form to configure Attendance entities.'
+  restrict access: true
+
+edit sch_attendance entities:
+  title: 'Edit sch Attendance entities'
+
+view published sch_attendance entities:
+  title: 'View published sch_attendance entities'

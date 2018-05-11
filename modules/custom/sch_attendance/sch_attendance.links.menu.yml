@@ -1,0 +1,14 @@
+
+# Sample_data menu items definition
+entity.sample_data.collection:
+  title: 'Sample Data list'
+  route_name: entity.sample_data.collection
+  description: 'List Sample_data entities'
+  parent: system.admin_structure
+  weight: 100
+
+entity.sch_attendance.collection:
+  title: 'Attendance list'
+  route_name: entity.sch_attendance.collection
+  parent: system.admin_structure
+  weight: 100

@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * Contains sch_attendance.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_help().
+ */
+function sch_attendance_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sch_attendance module.
+    case 'help.page.sch_attendance':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Attendance for the schools') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function sch_attendance_theme() {
+  return [
+    'sch_attendance' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+function pm($var, $log = FALSE) {
+  if ($log) {
+    error_log(print_r($var, 1));
+  }
+  else {
+    print "<pre>";
+    print_r($var);
+    print "</pre>";
+    exit;
+  }
+}
+
+function getUserClass() {
+  return 5;
+}
+
+//TODO: Make it a service
+function getClassStudents($class_id = NULL) {
+  $students = [];
+  $uids = [];
+  if ($class_id) {
+    $profiles = \Drupal::entityTypeManager()->getStorage('profile')
+    ->loadByProperties(['field_class' => $class_id]);
+    foreach ($profiles as $profile) {
+      $uids[] = $profile->uid->getValue()[0]['target_id'];
+    }
+  }
+
+  if (count($uids) > 0) {
+    $query = \Drupal::entityQuery('user')
+    ->condition('status', 1)
+    ->condition('roles', 'student')
+    ->condition('uid', $uids, 'IN')
+    ->execute();
+    $users = User::loadMultiple($query);
+    foreach($users as $id => $user) {
+      $students[] = ['name' => $user->getDisplayName(),
+                    'id' => $user->id()
+                    ];
+    }
+  }
+  return $students;
+}

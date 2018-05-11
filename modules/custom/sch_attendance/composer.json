@@ -1,0 +1,14 @@
+{
+  "name": "drupal/sch_attendance",
+  "type": "drupal-module",
+  "description": "Attendance for the schools",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/sch_attendance",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/sch_attendance",
+    "source": "http://cgit.drupalcode.org/sch_attendance"
+  },
+  "require": { }
+}

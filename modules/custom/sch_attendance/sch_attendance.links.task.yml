@@ -1,0 +1,26 @@
+# Sample_data routing definition
+entity.sample_data.canonical:
+  route_name: entity.sample_data.canonical
+  base_route: entity.sample_data.canonical
+  title: 'View'
+
+entity.sample_data.edit_form:
+  route_name: entity.sample_data.edit_form
+  base_route: entity.sample_data.canonical
+  title: 'Edit'
+
+entity.sample_data.delete_form:
+  route_name:  entity.sample_data.delete_form
+  base_route:  entity.sample_data.canonical
+  title: Delete
+  weight: 10
+
+entity.sch_attendance.canonical:
+  route_name: entity.sch_attandance.canonical
+  base_route: entity.sch_attandance.canonical
+  title: 'View'
+
+entity.sch_attendance.edit_form:
+  route_name: entity.sch_attandance.edit_form
+  base_route: entity.sch_attandance.canonical
+  title: 'Edit'

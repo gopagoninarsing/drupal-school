@@ -1,0 +1,7 @@
+sch_attendance.attendance_list:
+  path: 'attendance_list'
+  defaults:
+    _controller: '\Drupal\sch_attendance\Controller\attendanceController::attendance_list'
+    _title: 'Attendance'
+  requirements:
+    _permission: 'access content'
