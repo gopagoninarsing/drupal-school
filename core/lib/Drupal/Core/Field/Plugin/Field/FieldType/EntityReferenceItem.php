@@ -352,7 +352,6 @@ class EntityReferenceItem extends FieldItemBase implements OptionsProviderInterf
    */
   public function fieldSettingsForm(array $form, FormStateInterface $form_state) {
     $field = $form_state->getFormObject()->getEntity();
-
     // Get all selection plugins for this entity type.
     $selection_plugins = \Drupal::service('plugin.manager.entity_reference_selection')->getSelectionGroups($this->getSetting('target_type'));
     $handlers_options = [];
@@ -375,6 +374,7 @@ class EntityReferenceItem extends FieldItemBase implements OptionsProviderInterf
       '#element_validate' => [[get_class($this), 'fieldSettingsFormValidate']],
 
     ];
+
     $form['handler'] = [
       '#type' => 'details',
       '#title' => t('Reference type'),
@@ -409,7 +409,6 @@ class EntityReferenceItem extends FieldItemBase implements OptionsProviderInterf
 
     $handler = \Drupal::service('plugin.manager.entity_reference_selection')->getSelectionHandler($field);
     $form['handler']['handler_settings'] += $handler->buildConfigurationForm([], $form_state);
-
     return $form;
   }
 

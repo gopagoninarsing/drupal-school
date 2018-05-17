@@ -35,12 +35,10 @@ class SelectionPluginManager extends DefaultPluginManager implements SelectionPl
     if (!isset($options['target_type'])) {
       throw new \InvalidArgumentException("Missing required 'target_type' property for a EntityReferenceSelection plugin.");
     }
-
     // Initialize default options.
     $options += [
       'handler' => $this->getPluginId($options['target_type'], 'default'),
     ];
-
     // A specific selection plugin ID was already specified.
     if (strpos($options['handler'], ':') !== FALSE) {
       $plugin_id = $options['handler'];
@@ -60,12 +58,10 @@ class SelectionPluginManager extends DefaultPluginManager implements SelectionPl
   public function getPluginId($target_type, $base_plugin_id) {
     // Get all available selection plugins for this entity type.
     $selection_handler_groups = $this->getSelectionGroups($target_type);
-
     // Sort the selection plugins by weight and select the best match.
     uasort($selection_handler_groups[$base_plugin_id], ['Drupal\Component\Utility\SortArray', 'sortByWeightElement']);
     end($selection_handler_groups[$base_plugin_id]);
     $plugin_id = key($selection_handler_groups[$base_plugin_id]);
-
     return $plugin_id;
   }
 

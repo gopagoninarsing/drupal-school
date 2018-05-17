@@ -127,7 +127,6 @@ class EntityListBuilder extends EntityHandlerBase implements EntityListBuilderIn
     $operations += $this->moduleHandler()->invokeAll('entity_operation', [$entity]);
     $this->moduleHandler->alter('entity_operation', $operations, $entity);
     uasort($operations, '\Drupal\Component\Utility\SortArray::sortByWeightElement');
-
     return $operations;
   }
 
