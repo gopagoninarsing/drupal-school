@@ -34,17 +34,18 @@ class attendanceController extends ControllerBase {
 
     $userclass = getUserClass();
 
-    $this->getAttendance($userclass, $month, $year);
-
-    for($count = 1; $count <= $days; $count++) {
-      $header[] = $count."-".$month."-".$year;
-    }
-    return ['header' => $header, 'rows' => []];
+    $data = $this->getAttendance($userclass, $month, $year);
+    // for($count = 1; $count <= $days; $count++) {
+    //   $header[] = $count."-".$month."-".$year;
+    // }
+    return ['header' => $data['header'], 'rows' => $data['rows']];
   }
 
   public function getAttendance($class, $month, $year) {
     $start_date = strtotime($year."-".$month."-01 00:00:00");
     $end_date =  date("Y-m-t 23:59:59", $start_date);
+
+    $header = ["SNO" => 'SNO', "Student" => 'Student'];
 
     $query = \Drupal::entityQuery('sch_attendance')
     ->condition('class_id', $class)
@@ -52,20 +53,25 @@ class attendanceController extends ControllerBase {
     ->execute();
 
     $attendances = \Drupal::entityTypeManager()->getStorage('sch_attendance')->loadMultiple($query);
-    $rows = [];
+
+    $row = [];
     $students = getClassStudents($class);
+    $count = 0;
     if (count($students) > 0) {
       foreach($students as $student) {
-        pm($student);
+        $row[$student['id']]= [
+          'sno' => ++$count,
+          'student' => $student['name'],
+        ];
         foreach($attendances as $attendance) {
           $date = date('d-m-Y', $attendance->get('created')->getValue()[0]['value']);
-          $row[$date] = $attendance->get('student_id')->getValue();
+          $val = array_search($student['id'], array_column($attendance->get('student_id')->getValue(), 'student'));
+          $is_present = $attendance->get('student_id')->getValue()[$val]['is_present'];
+          $row[$student['id']][$date] = ($is_present == 1)? 'P': 'A';
+          $header[$date] = $date;
         }
       }
     }
-
-    pm($row);
-    return $row;
+    return ['header' => $header, 'rows' => $row];
   }
-
 }
