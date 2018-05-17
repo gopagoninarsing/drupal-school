@@ -1,0 +1,28 @@
+uuid: 41d67ecb-476b-4be5-b558-87cd7ef71ad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testing.field_attendance
+    - field.field.node.testing.field_test_link
+    - node.type.testing
+  module:
+    - sch_attendance
+    - user
+id: node.testing.default
+targetEntityType: node
+bundle: testing
+mode: default
+content:
+  field_attendance:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: attendanceformatter
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_test_link: true

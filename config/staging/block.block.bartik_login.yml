@@ -1,0 +1,22 @@
+uuid: f3db8c13-30e6-41e7-87b9-00a9cc491462
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - bartik
+_core:
+  default_config_hash: IItlF4SKHgxduIysVQdvirDJ_v3HGuAviOkidAOJYRE
+id: bartik_login
+theme: bartik
+region: content
+weight: -5
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

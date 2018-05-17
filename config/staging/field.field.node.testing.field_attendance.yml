@@ -1,0 +1,21 @@
+uuid: efea6401-d11d-4111-becc-7b5b860e27c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attendance
+    - node.type.testing
+  module:
+    - sch_attendance
+id: node.testing.field_attendance
+field_name: field_attendance
+entity_type: node
+bundle: testing
+label: Attendance
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: attendance

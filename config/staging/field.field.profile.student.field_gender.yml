@@ -1,0 +1,21 @@
+uuid: ca66705b-2ac9-4479-b458-c2267c57d6d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_gender
+    - profile.type.student
+  module:
+    - options
+id: profile.student.field_gender
+field_name: field_gender
+entity_type: profile
+bundle: student
+label: Gender
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

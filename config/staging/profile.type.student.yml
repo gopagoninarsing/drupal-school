@@ -1,0 +1,17 @@
+uuid: b71a6609-e7b3-4d44-9095-cc307d029b35
+langcode: en
+status: true
+dependencies: {  }
+id: student
+label: Student
+registration: false
+multiple: false
+roles:
+  student: student
+  authenticated: '0'
+  administrator: '0'
+  teacher: '0'
+  non_teaching_staff: '0'
+weight: 0
+use_revisions: true
+description: 'Student Profile'

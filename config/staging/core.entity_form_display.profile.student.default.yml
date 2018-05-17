@@ -1,0 +1,53 @@
+uuid: eb2267b5-f018-4e87-8f75-931b8228c7fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.student.field_class
+    - field.field.profile.student.field_date_of_birth
+    - field.field.profile.student.field_first_name
+    - field.field.profile.student.field_gender
+    - field.field.profile.student.field_last_name
+    - profile.type.student
+  module:
+    - datetime
+id: profile.student.default
+targetEntityType: profile
+bundle: student
+mode: default
+content:
+  field_class:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_date_of_birth:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_first_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_gender:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_last_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden: {  }

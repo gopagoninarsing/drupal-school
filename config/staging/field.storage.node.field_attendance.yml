@@ -1,0 +1,19 @@
+uuid: d142b2c2-8af2-4808-b7e0-00061cd918d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - sch_attendance
+id: node.field_attendance
+field_name: field_attendance
+entity_type: node
+type: attendance
+settings: {  }
+module: sch_attendance
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

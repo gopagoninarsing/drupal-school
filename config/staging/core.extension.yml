@@ -31,6 +31,7 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
+  sch_attendance: 0
   search: 0
   shortcut: 0
   system: 0

@@ -1,0 +1,19 @@
+uuid: c8f54b32-337a-4009-a766-384a87306fc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_first_name
+    - profile.type.student
+id: profile.student.field_first_name
+field_name: field_first_name
+entity_type: profile
+bundle: student
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
